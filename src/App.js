@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Countdown from './components/Countdown';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Countdown />
     </div>
   );
 }
 
 export default App;
+
+// useEffect(() => {
+    //     let intervalIds = {};
+
+    //     timers.forEach((timer) => {
+    //         if (timer.isRunning && timer.timeRemaining > 0) {
+    //             intervalIds[timer.id] = setInterval(() => {
+    //                 setTimers((prevTimers) =>
+    //                     prevTimers.map((t) =>
+    //                         t.id === timer.id ? { ...t, timeRemaining: t.timeRemaining - 1 } : t
+    //                     )
+    //                 );
+    //             }, 1000);
+    //         } else if (timer.timeRemaining === 0) {
+    //             clearInterval(intervalIds[timer.id]);
+    //             setTimers((prevTimers) =>
+    //                 prevTimers.map((t) =>
+    //                     t.id === timer.id ? { ...t, isRunning: false } : t
+    //                 )
+    //             );
+    //         }
+    //     });
+
+    //     return () => {
+    //         Object.values(intervalIds).forEach((intervalId) => clearInterval(intervalId));
+    //     };
+    // }, [timers]);
